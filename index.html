@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+    <style>
+        h1,
+        h2 {
+            text-align: center;
+            text-decoration: underline;
+            font-family: sans-serif;
+            color: purple;
+        }
+
+        .container{
+            display: block;
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        .options{
+            position: relative;
+            border:1px solid black;
+            padding: 55px;
+            background-image: linear-gradient(45deg,red,yellow,orange);
+            height: fit-content;
+        }
+        label{
+            display:flex;
+            position: relative;
+            background-image:linear-gradient(45deg,#7DF9FF, #0892D0, #23B2EE); 
+            left: 20px;
+            bottom: 25px;
+            border: 1px  solid #7DF9FF, #0892D0, #23B2EE;
+            padding: 10px;
+            width: 500px;
+            font-size: 20px;
+            border-radius: 20px;
+        }
+
+        .text{
+            
+            display: flex;
+            position: relative;
+            justify-content: center;
+            background-image:linear-gradient(45deg,#7DF9FF, #0892D0, #23B2EE);
+            width:350px;
+            height: 340px;
+            left: 800px;
+            bottom:1200px
+            
+        }
+
+        input[id=b1]:checked~.text{
+            transform:none;
+        }
+       
+
+        input[id=b2]:checked~.text{
+            transform:rotate(10deg);
+        }
+
+        input[id=b3]:checked~.text{
+            transform : rotate(45deg);
+        }
+       
+        input[id=b4]:checked~.text{
+            transform:rotateX(100deg);
+        }
+       
+        input[id=b5]:checked~.text{
+            transform:rotateY(45deg);
+        }
+       
+        input[id=b6]:checked~.text{
+            transform:rotateY(80deg);
+        }
+       
+        input[id=b8]:checked~.text{
+            transform:skew(20deg,20deg);
+        }
+       
+        input[id=b9]:checked~.text{
+            transform:skew(30deg,30deg);
+        }
+       
+        input[id=b10]:checked~.text{
+            transform:skewX(30deg);
+        }
+       
+        input[id=b11]:checked~.text{
+            transform:skewX(40deg);
+        }
+       
+        input[id=b12]:checked~.text{
+            transform:skewY(30deg);
+        }
+       
+        input[id=b13]:checked~.text{
+            
+            transform:skewY(40deg);
+        }
+       
+        input[id=b14]:checked~.text{
+            transform:translate(20px,10px);
+        }
+       
+        input[id=b15]:checked~.text{
+            transform:translate(20px,20px);
+        }
+       
+        input[id=b16]:checked~.text{
+            transform:scale(2,2);
+        }
+       
+        input[id=b17]:checked~.text{
+            transform:scale(2,3);
+        }
+       
+        input[id=b18]:checked~.text{
+            transform:matrix(0.866,0.7,-0.8,0.866,0,0);
+        }
+       
+        input[id=b19]:checked~.text{
+            transform:matrix(0.586,0.8,-0.8,0.586,0,0);
+        }
+       
+        input[id=b20]:checked~.text{
+            transform:matrix(0.586,0.8,-0.8,0.586,40,30);
+
+        }
+       
+
+
+        
+    </style>
+</head>
+
+<body>
+    <h1>CSS Transform</h1>
+    <h2>Click on the below property values to see the result</h2>
+    <div class="container">
+
+        <div class="options">
+            <input type="radio" id="b1" name="button"/>
+            <label for="b1">transform : none;</label>
+            <input type="radio" id="b2" name="button"/>
+            <label for="b2">transform : rotate(10deg);</label>
+            <input type="radio" id="b3" name="button"/>
+            <label for="b3">transform: rotate(45deg);</label>
+            <input type="radio" id="b4" name="button"/>
+            <label for="b4">transform: rotateX(45deg);</label>
+            <input type="radio" id="b5" name="button"/>
+            <label for="b5">transform: rotateX(100deg);</label>
+            <input type="radio" id="b6" name="button"/>
+            <label for="b6">transform: rotateY(45deg);</label>
+            <input type="radio" id="b7" name="button"/>
+            <label for="b7">transform: rotateY(80deg);</label>
+            <input type="radio" id="b8" name="button"/>
+            <label for="b8">transform: skew(20deg,20deg);</label>
+            <input type="radio" id="b9" name="button"/>
+            <label for="b9">transform: skew(30deg,30deg);</label>
+            <input type="radio" id="b10" name="button"/>
+            <label for="b10">transform: skewX(30deg);</label>
+            <input type="radio" id="b11" name="button"/>
+            <label for="b11">transform: skewX(40deg);</label>
+            <input type="radio" id="b12" name="button"/>
+            <label for="b12">transform: skewY(30deg);</label>
+            <input type="radio" id="b13" name="button"/>
+            <label for="b13">transform: skewY(40deg);</label>
+            <input type="radio" id="b14" name="button"/>
+            <label for="b14">transform: translate(20px,10px);</label>
+            <input type="radio" id="b15" name="button"/>
+            <label for="b15">transform: translate(20px,20px);</label>
+            <input type="radio" id="b16" name="button"/>
+            <label for="b16">transform: scale(2,2);</label>
+            <input type="radio" id="b17" name="button"/>
+            <label for="b17">transform: scale(2,3);</label>
+            <input type="radio" id="b18" name="button"/>
+            <label for="b18">transform: matrix(0.866,0.7,-0.8,0.866,0,0);</label>
+            <input type="radio" id="b19" name="button"/>
+            <label for="b19">transform: matrix(0.586,0.8,-0.8,0.586,0,0);</label>
+            <input type="radio" id="b20" name="button"/>
+            <label for="b20">transform: matrix(0.586,0.8,-0.8,0.586,40,30);</label>
+
+            <div class="text">
+                <img src="./square_PNG24.png"/>
+            </div>
+        </div>
+        
+    </div>
+</body>
+
+</html>
